@@ -62,6 +62,7 @@ let input = document.querySelector('.input'),
         ball.style.width = size + 'px'
         ball.style.height = size + 'px'
         ball.classList.add('ball')
+        ball.classList.add(randomFigure())
         ball.style.background = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`
         ball.style.top = y + 'px'
         ball.style.left = x + 'px'
@@ -70,8 +71,15 @@ let input = document.querySelector('.input'),
     }
 
     function randomColor() {
-        let color = Math.floor(Math.random() * 256)
+        let color = Math.floor(Math.random() * 156)
         return color
+    }
+
+    function randomFigure(){
+        if(Math.floor(Math.random()*2)){
+            return 'ball'
+        }
+        return 'square'
     }
     
     function random(min, max) {

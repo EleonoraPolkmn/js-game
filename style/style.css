@@ -77,6 +77,11 @@ h2{
     border-radius: 50%;
 }
 
+.square{
+    position: absolute;
+    border-radius: 0;
+}
+
 /* .box_time{
     animation: animate 1s alternate infinite;
 } */
